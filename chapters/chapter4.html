@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 4: Files & Directories — LearnLinux</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo"><span class="logo-tux">🐧</span><span class="logo-text">LearnLinux</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html#chapters">All Chapters</a></li>
+      <li><a href="chapter5.html" class="nav-cta">Next Chapter →</a></li>
+    </ul>
+  </nav>
+  <main class="chapter-page">
+    <div class="ch-header">
+      <div class="ch-badge">Chapter 04 · Beginner · 25 min</div>
+      <h1>Files &amp; Directories</h1>
+      <p class="lead">Create, copy, move, rename, and delete files and directories like a pro.</p>
+    </div>
+
+    <h2>Creating Files</h2>
+    <h3>touch — Create an empty file</h3>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">touch myfile.txt</span>
+      <span class="out"># Creates empty myfile.txt</span>
+    </div>
+
+    <h3>mkdir — Create directories</h3>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">mkdir projects</span>
+      <span class="out"># Creates a projects/ directory</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">mkdir -p projects/linux/scripts</span>
+      <span class="out"># Creates nested directories in one command</span>
+    </div>
+
+    <h2>Copying Files</h2>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">cp file.txt backup.txt</span>
+      <span class="out"># Copy file.txt to backup.txt</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">cp file.txt /tmp/</span>
+      <span class="out"># Copy to /tmp directory</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">cp -r projects/ projects_backup/</span>
+      <span class="out"># Copy entire directory recursively</span>
+    </div>
+
+    <h2>Moving and Renaming</h2>
+    <p><code>mv</code> both moves AND renames files (same command):</p>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">mv old.txt new.txt</span>
+      <span class="out"># Rename old.txt to new.txt</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">mv file.txt /home/alice/Documents/</span>
+      <span class="out"># Move file to Documents folder</span>
+    </div>
+
+    <h2>Deleting Files</h2>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">rm file.txt</span>
+      <span class="out"># Delete a file</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">rm -r projects/</span>
+      <span class="out"># Delete directory and all contents</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">rmdir empty_folder/</span>
+      <span class="out"># Delete empty directory only</span>
+    </div>
+
+    <div class="warning">⚠️ <strong>Warning:</strong> Linux has no Recycle Bin! <code>rm</code> permanently deletes files. Always double-check before running <code>rm -rf</code>.</div>
+
+    <h2>Wildcards</h2>
+    <p>Wildcards let you match multiple files at once:</p>
+    <table>
+      <tr><th>Wildcard</th><th>Matches</th><th>Example</th></tr>
+      <tr><td><code>*</code></td><td>Any characters</td><td><code>rm *.txt</code> deletes all .txt files</td></tr>
+      <tr><td><code>?</code></td><td>One character</td><td><code>ls file?.txt</code> matches file1.txt, file2.txt</td></tr>
+      <tr><td><code>[abc]</code></td><td>One of a, b, or c</td><td><code>ls [abc]*</code> starts with a, b, or c</td></tr>
+    </table>
+
+    <div class="note">✅ <strong>Chapter Complete!</strong> You can now fully manage files and directories. Next: reading and editing file contents.</div>
+
+    <nav class="chapter-nav">
+      <a href="chapter3.html">← Chapter 3</a>
+      <a href="../index.html" class="home-link">📋 All Chapters</a>
+      <a href="chapter5.html">Chapter 5: Viewing Files →</a>
+    </nav>
+  </main>
+</body>
+</html>

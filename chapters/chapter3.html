@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 3: File System Navigation — LearnLinux</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo"><span class="logo-tux">🐧</span><span class="logo-text">LearnLinux</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html#chapters">All Chapters</a></li>
+      <li><a href="chapter4.html" class="nav-cta">Next Chapter →</a></li>
+    </ul>
+  </nav>
+  <main class="chapter-page">
+    <div class="ch-header">
+      <div class="ch-badge">Chapter 03 · Beginner · 25 min</div>
+      <h1>File System Navigation</h1>
+      <p class="lead">Understand the Linux directory structure and navigate confidently using pwd, ls, and cd.</p>
+    </div>
+    <h2>The Linux File System Tree</h2>
+    <p>Linux uses a single directory tree starting at <code>/</code> (called "root"). Everything — files, devices, processes — lives somewhere in this tree.</p>
+    <pre>/
+├── bin/       # Essential user commands (ls, cp, mv...)
+├── boot/      # Boot loader files, kernel
+├── dev/       # Device files
+├── etc/       # System config files
+├── home/      # User home directories (/home/alice)
+├── lib/       # Shared libraries
+├── media/     # Mounted removable media (USB, CD)
+├── mnt/       # Temporary mount points
+├── opt/       # Optional software
+├── proc/      # Virtual filesystem (running processes)
+├── root/      # Home of the root user
+├── sbin/      # System administration commands
+├── tmp/       # Temporary files (cleared on reboot)
+├── usr/       # User programs, libraries, docs
+└── var/       # Variable data (logs, databases)</pre>
+
+    <h2>pwd — Where Am I?</h2>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">pwd</span>
+      <span class="out">/home/alice</span>
+    </div>
+
+    <h2>ls — List Directory Contents</h2>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">ls</span>
+      <span class="out">Desktop  Documents  Downloads  Music  Pictures</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">ls -l</span>
+      <span class="out">drwxr-xr-x 2 alice alice 4096 Jun  8 10:00 Desktop
+-rw-r--r-- 1 alice alice 1234 Jun  7 09:15 notes.txt</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">ls -la</span>
+      <span class="out"># Shows hidden files too (those starting with .)</span>
+    </div>
+    <table>
+      <tr><th>Option</th><th>Meaning</th></tr>
+      <tr><td><code>-l</code></td><td>Long format (permissions, size, date)</td></tr>
+      <tr><td><code>-a</code></td><td>Show all files including hidden</td></tr>
+      <tr><td><code>-h</code></td><td>Human-readable file sizes (KB, MB)</td></tr>
+      <tr><td><code>-t</code></td><td>Sort by modification time</td></tr>
+      <tr><td><code>-r</code></td><td>Reverse sort order</td></tr>
+    </table>
+
+    <h2>cd — Change Directory</h2>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">cd /etc</span>
+      <span class="out"># Go to /etc</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">cd ..</span>
+      <span class="out"># Go up one level</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">cd ~</span>
+      <span class="out"># Go to your home directory</span>
+    </div>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">cd -</span>
+      <span class="out"># Go to previous directory</span>
+    </div>
+
+    <h2>Absolute vs Relative Paths</h2>
+    <p><strong>Absolute path</strong> starts from root <code>/</code>: always works no matter where you are.</p>
+    <pre>/home/alice/Documents/notes.txt</pre>
+    <p><strong>Relative path</strong> starts from your current location:</p>
+    <pre>Documents/notes.txt   # if you're in /home/alice
+../alice/Documents     # using .. to go up first</pre>
+
+    <div class="note">💡 <strong>Tip:</strong> Use Tab completion when typing paths. Type the first few letters and press Tab — Linux fills in the rest!</div>
+
+    <div class="note">✅ <strong>Chapter Complete!</strong> You can now navigate the entire Linux file system. Next: creating, copying, and moving files.</div>
+
+    <nav class="chapter-nav">
+      <a href="chapter2.html">← Chapter 2</a>
+      <a href="../index.html" class="home-link">📋 All Chapters</a>
+      <a href="chapter4.html">Chapter 4: Files & Dirs →</a>
+    </nav>
+  </main>
+</body>
+</html>

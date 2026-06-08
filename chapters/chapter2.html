@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 2: The Terminal & Shell — LearnLinux</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo"><span class="logo-tux">🐧</span><span class="logo-text">LearnLinux</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html#chapters">All Chapters</a></li>
+      <li><a href="chapter3.html" class="nav-cta">Next Chapter →</a></li>
+    </ul>
+  </nav>
+
+  <main class="chapter-page">
+    <div class="ch-header">
+      <div class="ch-badge">Chapter 02 · Beginner · 20 min</div>
+      <h1>The Terminal &amp; Shell</h1>
+      <p class="lead">Open your first terminal, understand what a shell is, and run your very first Linux commands.</p>
+    </div>
+
+    <h2>What is the Terminal?</h2>
+    <p>The <strong>terminal</strong> (also called the console or command line) is a text-based interface where you type commands and receive text output. It gives you direct, powerful control over your system.</p>
+    <p>The <strong>shell</strong> is the program that interprets your commands. The most common shell on Linux is <strong>Bash</strong> (Bourne Again SHell). Other shells include zsh, fish, and sh.</p>
+
+    <h2>Opening the Terminal</h2>
+    <p>On Ubuntu desktop: press <code>Ctrl + Alt + T</code> or search for "Terminal" in the app launcher.</p>
+    <p>Once open, you'll see the <strong>prompt</strong> — a line waiting for your input:</p>
+    <div class="code-block">
+      <span class="prompt">username@hostname:~$</span>
+    </div>
+    <p>The <code>~</code> means you're in your home directory. The <code>$</code> means you're a regular user (if it were <code>#</code>, you'd be root/superuser).</p>
+
+    <h2>Your First Commands</h2>
+    <h3>echo — Print text</h3>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">echo "Hello, Linux!"</span>
+      <span class="out">Hello, Linux!</span>
+    </div>
+
+    <h3>date — Current date and time</h3>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">date</span>
+      <span class="out">Mon Jun  8 10:30:00 UTC 2026</span>
+    </div>
+
+    <h3>whoami — Your username</h3>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">whoami</span>
+      <span class="out">ubuntu</span>
+    </div>
+
+    <h3>uname -a — System information</h3>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">uname -a</span>
+      <span class="out">Linux mypc 5.15.0 #1 SMP x86_64 GNU/Linux</span>
+    </div>
+
+    <h3>clear — Clear the screen</h3>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">clear</span>
+    </div>
+    <p>Or use the keyboard shortcut <code>Ctrl + L</code>.</p>
+
+    <h2>Command Structure</h2>
+    <p>Linux commands follow this pattern:</p>
+    <pre>command [options] [arguments]</pre>
+
+    <table>
+      <tr><th>Part</th><th>Example</th><th>Meaning</th></tr>
+      <tr><td>command</td><td><code>ls</code></td><td>The program to run</td></tr>
+      <tr><td>option (short)</td><td><code>-l</code></td><td>Modify behavior (single dash)</td></tr>
+      <tr><td>option (long)</td><td><code>--all</code></td><td>Same but spelled out (double dash)</td></tr>
+      <tr><td>argument</td><td><code>/home</code></td><td>What to operate on</td></tr>
+    </table>
+
+    <p>Example: <code>ls -la /home</code> = run <code>ls</code>, with options <code>-l</code> (long format) and <code>-a</code> (all files), on the <code>/home</code> directory.</p>
+
+    <h2>Getting Help</h2>
+    <h3>man — Manual pages</h3>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">man ls</span>
+      <span class="out"># Opens the full manual for the ls command</span>
+    </div>
+    <p>Press <code>q</code> to quit the manual. Use arrow keys or Page Up/Down to scroll.</p>
+
+    <h3>--help flag</h3>
+    <div class="code-block">
+      <span class="prompt">$</span><span class="cmd">ls --help</span>
+    </div>
+
+    <h2>Essential Keyboard Shortcuts</h2>
+    <table>
+      <tr><th>Shortcut</th><th>Action</th></tr>
+      <tr><td><code>Tab</code></td><td>Auto-complete command or filename</td></tr>
+      <tr><td><code>↑ / ↓</code></td><td>Browse command history</td></tr>
+      <tr><td><code>Ctrl + C</code></td><td>Cancel running command</td></tr>
+      <tr><td><code>Ctrl + L</code></td><td>Clear screen</td></tr>
+      <tr><td><code>Ctrl + A</code></td><td>Jump to start of line</td></tr>
+      <tr><td><code>Ctrl + E</code></td><td>Jump to end of line</td></tr>
+      <tr><td><code>Ctrl + R</code></td><td>Search command history</td></tr>
+    </table>
+
+    <div class="note">💡 <strong>Tab completion</strong> is your best friend. Start typing a command or filename and press Tab — Linux will complete it for you. Press Tab twice to see all options.</div>
+
+    <div class="note">✅ <strong>Chapter Complete!</strong> You can open a terminal, understand the prompt, run basic commands, and get help. Next up: navigating the Linux file system.</div>
+
+    <nav class="chapter-nav">
+      <a href="chapter1.html">← Chapter 1</a>
+      <a href="../index.html" class="home-link">📋 All Chapters</a>
+      <a href="chapter3.html">Chapter 3: File System →</a>
+    </nav>
+  </main>
+</body>
+</html>

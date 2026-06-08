@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 1: Introduction to Linux — LearnLinux</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo"><span class="logo-tux">🐧</span><span class="logo-text">LearnLinux</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html#chapters">All Chapters</a></li>
+      <li><a href="chapter2.html" class="nav-cta">Next Chapter →</a></li>
+    </ul>
+  </nav>
+
+  <main class="chapter-page">
+    <div class="ch-header">
+      <div class="ch-badge">Chapter 01 · Beginner · 15 min</div>
+      <h1>Introduction to Linux</h1>
+      <p class="lead">Learn what Linux is, why it matters, and how to set up your first Linux environment.</p>
+    </div>
+
+    <h2>What is Linux?</h2>
+    <p>Linux is a free, open-source operating system kernel created by Linus Torvalds in 1991. Unlike Windows or macOS, Linux is built on the philosophy that software should be free to use, study, modify, and distribute.</p>
+    <p>Today, Linux powers most of the internet's servers, all Android devices, supercomputers, embedded systems, and millions of desktop machines. Learning Linux gives you powerful tools used by developers, sysadmins, and engineers worldwide.</p>
+
+    <div class="note">💡 <strong>Fun Fact:</strong> Over 96% of the world's top 1 million web servers run Linux. Most cloud platforms (AWS, Google Cloud, Azure) are built on Linux.</div>
+
+    <h2>Linux Distributions</h2>
+    <p>Linux comes in many "distributions" (distros) — packaged versions of the Linux kernel plus software. Each distro is tuned for different needs:</p>
+
+    <table>
+      <tr><th>Distro</th><th>Best For</th><th>Notes</th></tr>
+      <tr><td><code>Ubuntu</code></td><td>Beginners, desktops, servers</td><td>Most popular, huge community</td></tr>
+      <tr><td><code>Debian</code></td><td>Stability-focused servers</td><td>Base of Ubuntu</td></tr>
+      <tr><td><code>Fedora</code></td><td>Developers, cutting-edge</td><td>Red Hat sponsored</td></tr>
+      <tr><td><code>CentOS/RHEL</code></td><td>Enterprise servers</td><td>Industry standard for business</td></tr>
+      <tr><td><code>Arch Linux</code></td><td>Advanced users</td><td>Minimal, rolling release</td></tr>
+      <tr><td><code>Kali Linux</code></td><td>Security / penetration testing</td><td>Pre-loaded security tools</td></tr>
+    </table>
+
+    <p>For learning, <strong>Ubuntu</strong> is strongly recommended — it has the best documentation, widest software support, and a friendly community.</p>
+
+    <h2>How to Get Linux</h2>
+    <h3>Option 1: Virtual Machine (Recommended for Beginners)</h3>
+    <p>Install a virtual machine manager like <strong>VirtualBox</strong> (free) or VMware, then download an Ubuntu ISO and create a VM. This lets you run Linux inside your existing Windows or macOS system without any risk.</p>
+
+    <h3>Option 2: WSL2 on Windows</h3>
+    <p>Windows Subsystem for Linux 2 lets you run a full Linux terminal directly in Windows 10/11:</p>
+    <pre>wsl --install</pre>
+    <p>This installs Ubuntu by default. Open the Start menu and search "Ubuntu" to launch it.</p>
+
+    <h3>Option 3: Dual Boot</h3>
+    <p>Install Linux alongside your current OS, choosing which to boot when your computer starts. Best performance, but requires partitioning your disk.</p>
+
+    <h3>Option 4: Online Terminals</h3>
+    <p>Try Linux right in your browser with no installation needed at <strong>replit.com</strong>, <strong>bellard.org/jslinux</strong>, or use a cloud VM from any provider.</p>
+
+    <h2>The Linux Philosophy</h2>
+    <p>Linux follows the Unix philosophy:</p>
+    <ul style="list-style:disc;padding-left:1.5rem;color:var(--muted);line-height:2">
+      <li>Do one thing and do it well</li>
+      <li>Everything is a file</li>
+      <li>Small tools that chain together</li>
+      <li>Text is the universal interface</li>
+    </ul>
+
+    <p>This means instead of one giant app, Linux gives you dozens of small, powerful tools you combine to accomplish complex tasks. It's this philosophy that makes the command line so powerful.</p>
+
+    <div class="note">✅ <strong>Chapter Complete!</strong> You now know what Linux is, which distribution to choose, and how to set up your environment. In the next chapter, you'll open your first terminal and run real commands.</div>
+
+    <nav class="chapter-nav">
+      <a href="../index.html">← Home</a>
+      <a href="../index.html" class="home-link">📋 All Chapters</a>
+      <a href="chapter2.html">Chapter 2: The Terminal →</a>
+    </nav>
+  </main>
+</body>
+</html>
